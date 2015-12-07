@@ -1,0 +1,148 @@
+/*============================================================================
+  #Responsive Stuff
+=============================================================================*/
+.medium-down--hide {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .medium-down--hide {
+    display: block;
+  }
+
+  .large--hide {
+    display: none;
+  }
+}
+
+/*============================================================================
+  #Misc Stuff
+==============================================================================*/
+figure img {
+  max-width: 100%;
+}
+
+
+/*============================================================================
+  #Feature Diagram
+==============================================================================*/
+.featureDiagram {
+  position: relative;
+}
+
+.featureDiagram div {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    width: 67%;
+}
+
+.featureDiagram div * {
+  flex-basis: 0;
+}
+
+.featureDiagram div figure {
+  width: 68%;
+  margin: 1em auto;
+  flex-grow: 1.5;
+}
+
+.featureDiagram div figure figcaption {
+  letter-spacing: $largeLetterSpacing;
+  color: $sienna;
+}
+
+.featureDiagram div p {
+  flex-grow: 1;
+  font-size: .8em;
+  visibility: hidden;
+}
+
+/* Mobile Feature Diagram list styles */
+.featureDiagram ol {
+  margin: 0;
+}
+.featureDiagram ol li {
+  color: $sienna;
+  list-style-position: inside;
+  font-size: 1.57143em;
+  margin-bottom: 2em;
+}
+.featureDiagram ol li h3 {
+  font-size: 1em;
+}
+.featureDiagram ol li p {
+  color: black;
+  font-size: .7em;
+}
+
+/* Desktop feature diagram */
+.medium-down--hide.featureDiagram > figure {
+  padding: 0 15%;
+}
+.medium-down--hide.featureDiagram {
+  margin: 6em auto;
+  width: 60%;
+}
+
+/* On hover of a dot, display the p */
+.featureDiagram div:hover p {
+  visibility: visible;
+}
+
+/* Position the dots */
+.featureDiagram p {
+  padding: 0 2.5em;
+}
+.featureDiagram .muscle {
+  flex-direction: row-reverse;
+  top: -8%;
+  left: -28%;
+  text-align: left;
+}
+
+.muscle p {
+    margin-bottom: 15%;
+}
+
+
+.featureDiagram .muscle p, .featureDiagram .bone p {
+  text-align: right;
+}
+
+.featureDiagram .gut p, .featureDiagram .hoof p {
+  text-align: left;
+}
+
+
+.featureDiagram .gut {
+  flex-direction: row;
+  top: 0%;
+  left: 59%;
+  text-align: right;
+}
+.gut p {
+  margin-bottom: 9%;
+}
+.gut figcaption {
+    margin-right: -2em;
+}
+
+
+.featureDiagram .bone {
+  flex-direction: row-reverse;
+  bottom: 8%;
+  left: -25%;
+  text-align: left;
+}
+.bone p {
+    margin-top: 5%;
+}
+
+.featureDiagram .hoof {
+  flex-direction: row;
+  bottom: 0;
+  right: -30%;
+  text-align: right;
+}
